@@ -47,6 +47,12 @@ public class Chromosome {
 		}
 	}
 	
+	public void printGenes(){
+		for(int i = 0; i < this.path.size(); i++){
+			System.out.print(this.path.get(i) + " ");
+		}
+	}
+	
 	public void calculateScore(int cost[][]){
 		long tempTotalCost = 0;
 		for(int i = 0; i < this.path.size()-1; i++){

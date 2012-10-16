@@ -1,9 +1,8 @@
-import ga.Chromosome;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import ga.GASolver;
 import aStar.AStarSolver;
 
 public class kickStart {
@@ -28,11 +27,14 @@ public class kickStart {
 				}
 				   
 			
-			//AStarSolver tspSolver = new AStarSolver(cost, numOfCities, 0);
-			//tspSolver.printOrder();
+			AStarSolver tspSolver = new AStarSolver(cost, numOfCities, 0);
+			System.out.println("Using A* Search:");
+			tspSolver.printPath();
+			System.out.println();
 			
-			Chromosome testingChrome = new Chromosome(numOfCities, cost);
-			System.out.println(testingChrome.getScore());
+			GASolver tspGASolver = new GASolver(numOfCities, cost);
+			System.out.println("Using Genetic Algorithm:");
+			tspGASolver.printAns(3);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
