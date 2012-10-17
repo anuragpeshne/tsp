@@ -7,7 +7,7 @@ public class Population {
 	PriorityQueue<Chromosome> population;
 	private Comparator<Chromosome> comparator;
 	private int noOfCities;
-	static final int populationSize = 100000;
+	static final int populationSize = 10000;
 	
 	public Population(int noOfCities, int cost[][]){
 		this.noOfCities = noOfCities;

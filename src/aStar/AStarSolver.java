@@ -27,6 +27,7 @@ public class AStarSolver {
 	private void solve(int [][] cost, int numOfCities, int startCity){
 		int numOfVisited = 1;
 		int currentCity = startCity;
+		visited[currentCity] = numOfVisited++;
 		while(numOfVisited <= numOfCities){
 			for(int i = 0; i < numOfCities; i++){
 				if(i != currentCity && cost[currentCity][i] < Integer.MAX_VALUE){
